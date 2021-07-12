@@ -1,0 +1,80 @@
+body{
+    margin: 0;
+    padding: 0;
+    background: #333;
+    /* background: url('/images/pexels-photo-297485.jpeg') 600px 500px; */
+    background: url('/images/cropped-banner2.jpg');
+    font-family: "Montserrat",sans-serif;
+}
+.container{
+    width:360px;
+    height: 600px;
+   background-color:rgb(105, 77, 121);
+   background: url('/images/cropped-banner2.jpg');
+    position: absolute;
+    top: 50%;
+    
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: white;
+    text-align: center;
+}
+.con h1{
+    font-size: 40px;
+    margin-top: 125px;
+    margin-bottom: 60px;
+}
+.tbox{
+    width: 280px;
+    height: 40px;
+    background: #f1f1f1b3;
+    border-radius: 10px;
+    margin: 10px auto;
+}
+.tbox input{
+    background: none;
+    border: none;
+    outline: none;
+    text-align: center;
+    width: 90%;
+    line-height: 37px;
+    font-family: "Montserrat",sans-serif;
+    font-size: 14px;
+    color: rgb(60, 75, 94);
+}
+.form-control{
+    width: 300px;
+    height: 40px;
+    background: #f1f1f1b3;
+    border-radius: 10px;
+    margin: 10px auto;
+}
+.btn{
+    width: 260px;
+    height: 40px;
+    background: #f1f1f1b3;
+    border-radius: 10px;
+    margin: 14px auto;
+    display: block;
+    font-family: "Montserrat",sans-serif;
+    font-size: 16px;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+.anchor{
+ 
+   bottom: 80px;
+   left: 50%;
+   transform: translateX(-50%);
+   width: 260px;
+   padding: 10px 0;
+   text-decoration: none;
+   text-align: center;
+   transition: 0.4s all;
+   color: #3498db;
+}
+a:hover{
+    background: #00000040;
+
+}

@@ -1,0 +1,106 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Blood bank management system</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link href="https://fonts.googleapis.com/css2?family=Ranchers&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cairo&family=Ranchers&display=swap" rel="stylesheet">
+  
+	
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/css/bootstrap.min.css" integrity="sha384-VCmXjywReHh4PwowAiWNagnWcLhlEJLA5buUprzK8rxFgeH0kww/aWY76TfkUoSX" crossorigin="anonymous"> 
+ 
+</head>
+<body style="background-image: url('/images/iStock-627356286_SOCIAL.jpg'); background-size: cover;"> <br>
+  <br>
+  <form action="/register" method="post">
+  <div class="container" style="width:500px;background:whitesmoke">
+   <h2>Register</h2>
+   <% if(typeof alert!= 'undefined') { %>
+    <% alert.forEach(function(error) { %>
+   <div class="alert alert-warning alert-dismissible fade show" role="alert">
+     <%= error.msg %>
+    <!-- <strong>Holy guacamole!</strong>Make sure ur username and password should be atleast 3 characters long. -->
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close" action='/register'>
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <% }) %>
+  <% } %>
+  <% if(message.length>0) { %>
+    <div class="alert alert-danger col-sm-12"><%= message %></div>
+  <% }%>
+
+ 
+   <!-- <div class="form-group">
+    <label for="name">Fullname</label>
+    <input type="text" class="form-control" id="name" name="name" required>
+  </div> -->
+
+  
+  <div class="form-group">
+    <label for="Username">Username</label>
+    <input type="text" class="form-control" id="username" required name="username" onkeyup="pass()">
+    <!-- //<p id="alert" class="text-danger"></p></div>
+    </div> --></div>
+    <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" class="form-control" id="email" name="email" required>
+      
+    
+  </div>
+  <div class="form-group">
+    <label for="password">Password</label>
+    <input type="password" class="form-control" id="password" name="password" onkeyup="PassCheck();" required>
+    <!-- <p id="alert" class="text-danger"></p> -->
+  </div>
+    <div class="form-group">
+    <label for="confirmpassword">Confirm Password</label>
+    <input type="password" class="form-control" id="confirmpassword" name="confirmpassword" onkeyup="PassCheck();" required>
+  </div>
+  <p id="alert" class="text-danger"></p>
+  <button type="submit" class="btn btn-primary" id="submit" >Submit</button><br>
+  <br>
+  <!-- <p id="alert" class="text-danger"></p>
+  <p id="alert" class="text-danger"></p> -->
+  
+</div>
+</form> 
+<script type="text/javascript">
+//     const passwordField= $('#password');
+//   const confirmpasswordField= $('#confirmpassword');
+
+//   confirmpasswordField.keyup(() => {
+//     if(passwordField.val()==confirmpasswordField.val()){
+//       $('#submit').attr('disabled',false);
+//       $('#alert').text('');
+//     }else{
+//        $('#submit').attr('disabled',true);
+//         $('#alert').text('passwords do not match');
+//     }
+//   });
+function PassCheck(){
+    var password=document.getElementById('password');
+    var confirmpassword=document.getElementById('confirmpassword');
+    if(password.value==confirmpassword.value){
+        document.getElementById('submit').disabled=false;
+        // alert('passwords donot match')
+        $('#alert').text('');
+    }
+    
+    else{
+        document.getElementById('submit').disabled=true;
+        $('#alert').text('passwords do not match');
+    }
+}
+
+</script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/js/bootstrap.min.js" integrity="sha384-XEerZL0cuoUbHE4nZReLT7nx9gQrQreJekYhJD9WNWhH8nEW+0c5qq7aIo2Wl30J" crossorigin="anonymous"></script>
+</body>
+</html>

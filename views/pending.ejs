@@ -1,0 +1,96 @@
+<%- include('partials/header') %>
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <table id="mytable" class="table table-hover table-dark">
+            <thead>
+                <tr>
+                    <th scope="col">Donor Id</th>
+                    <th scope="col">FirstName</th>
+                    <th scope="col">Lastname</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Phone Number</th>
+                    <th scope="col">Address</th>
+                    <th scope="col">City</th>
+                    <th scope="col">Gender</th>
+                    <th scope="col">Date of birth</th>
+                    <th scope="col">Age</th>
+                    <th scope="col">Blood group</th>
+                    <!-- <th scope="col">Weight</th>
+                    <th scope="col">Blood Pressure</th>
+                    <th scope="col">Temperature</th> -->
+                    <!-- <th scope="col">Pulse</th> -->
+                    
+                    <th scope="col">Viewinfo</th>
+                    <th scope="col">Delete</th>
+                    
+                    
+                </tr>
+            </thead>
+            <tbody>
+                <% print.forEach(function (user) { %>
+                    <form></form>
+                  <tr>
+                    <td><%= user.u_id %></td>
+                      <td><%= user.fname %></td>
+                      <td><%= user.lname %></td>
+                      <td><%= user.email %></td>
+                      <td><%= user.phno %></td>
+                      <td><%= user.address %></td>
+                      <td><%= user.city %></td>
+                      <td><%= user.gender %></td>
+                      <td><%= user.dob %></td>
+                      <td><%= user.age %></td>
+                      <td><%= user.b_group %></td> 
+                      <!-- <td><%= user.status %></td> -->
+                      <!-- <td><%= user.weight %></td>
+                      <td><%= user.bp %></td>
+                      <td><%= user.temp %></td>
+                      <td><%= user.pulse %></td> -->
+                     
+                      <td><a href="/viewinfo/<%=user.u_id%>" class="btn btn-primary" action="/viewinfo/<%=user.u_id%>">viewinfo</a></td>
+                     <td> <button class="btn btn-danger"><a href="/delete/<%=user.u_id%>" style="text-decoration: none; color: black;">Delete</a></button>
+                      
+                     </td>
+                     
+
+                      
+                  </tr>  
+                <% }) %>
+            </tbody>
+        </table>  
+        <!-- <div class="container" id="mytable">
+            <div class="row">
+                <% print.forEach(function (user) { %>
+                    
+                      
+                        
+                          
+                          
+                      <div class="col-4">
+             
+                <div class="card" style="width:18rem;margin-left: 40%;margin-bottom: 5%;border: rgb(70, 62, 62);background-color: rgb(231, 219, 219);"id="mytable">
+                    <img src="/images/<%=user.image%>" class="card-img-top" alt="image" style="height:220px">
+           
+              
+                    <h5 class="card-title" style="text-align: center;"><%= user.fname %></h5>
+                    <p class="card-text" style="text-align: center;"><%= user.b_group %></p>
+                   
+                    
+                    <a href="/viewinfo/<%=user.u_id%>" class="btn btn-dark" action="/viewinfo/<%=user.u_id%>">viewinfo</a>
+                    
+                </div>
+               
+            </div> 
+            
+              
+            <% }) %>
+              
+            </div>
+        </div> -->
+    </body>
+</html>
+<%- include('partials/footer') %>

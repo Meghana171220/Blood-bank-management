@@ -1,0 +1,97 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Blood bank management system</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link href="https://fonts.googleapis.com/css2?family=Ranchers&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Cairo&family=Ranchers&display=swap" rel="stylesheet">
+	
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/css/bootstrap.min.css" integrity="sha384-VCmXjywReHh4PwowAiWNagnWcLhlEJLA5buUprzK8rxFgeH0kww/aWY76TfkUoSX" crossorigin="anonymous"> 
+   <script type="text/javascript">
+    const searchfun=()=>{
+        let filter=document.getElementById('myinput').value.toUpperCase();
+        let mytable=document.getElementById('mytable');
+        let div=mytable.getElementsByTagName('div');
+        for(var i=0;i<div.length;i++){
+            let p=div[i].getElementsByTagName('p')[1];
+            if(p){
+                let textvalue=p.textContent||p.innerHTML;
+                if(textvalue.toUpperCase().indexOf(filter)>-1){
+                    div[i].style.display="";
+                }
+                else{
+                    div[i].style.display="none";
+                }
+            }
+        }
+    }
+
+</script>
+ 
+</head>
+<body style="background-color: gray;">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">Blood bank</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/aboutus">Aboutus</a>
+        </li>
+        
+        
+        <li class="nav-item">
+          <a class="nav-link" href="/user" tabindex="-1" aria-disabled="true">Register here</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/checkforavailability" tabindex="-1" aria-disabled="true">checkforavailability</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/admin" tabindex="-1" aria-disabled="true">Admin login</a>
+        </li>
+      </ul>
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2"  type="text" id="myinput" name="" placeholder="search for blood group" onkeyup="searchfun()" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      </form>
+    </div>
+  </nav>
+  <div class="container" id="mytable">
+    <div class="row">
+    <%userdonor.forEach(function (userdonor) { %>
+            
+              
+                
+                  
+                  
+              <div class="col-4">
+     
+        <div class="card" style="width:18rem;margin-left: 40%;margin-bottom: 5%;border: rgb(70, 62, 62);background-color: rgb(231, 219, 219);"id="mytable">
+            <img src="/images/<%=userdonor.image%>" class="card-img-top" alt="image" style="height:220px">
+   
+      
+            <h5 class="card-title" style="text-align: center;"><%= userdonor.fname %></h5>
+            <p class="card-text" style="text-align: center;"><%= userdonor.b_group %></p>
+            <a href="/viewinfo/<%=userdonor.u_id%>" class="btn btn-dark" action="/viewinfo/<%=userdonor.u_id%>">viewinfo</a>
+        </div>
+       
+    </div> 
+    
+      
+      
+      <% }) %>
+    </div>
+</div>
+
+</body>
+<%- include('partials/footer') %>

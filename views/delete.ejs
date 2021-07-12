@@ -1,0 +1,34 @@
+<%- include('partials/header') %>
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Blood bank management system</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link href="https://fonts.googleapis.com/css2?family=Ranchers&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Cairo&family=Ranchers&display=swap" rel="stylesheet">
+	
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/css/bootstrap.min.css" integrity="sha384-VCmXjywReHh4PwowAiWNagnWcLhlEJLA5buUprzK8rxFgeH0kww/aWY76TfkUoSX" crossorigin="anonymous"> 
+ 
+</head>
+<body>
+   
+<form action="/delete" method="post">
+    <div class="container" style="width: 500px;">
+        <div class="form-group">
+            <label for="Userid">Userid</label>
+            <input type="text" name="u_id" placeholder="Enter UserId that u want to delete" required id="fname" class="form-control">
+        </div>
+        <button type="submit" class="btn btn-primary" id="submit" action="/delete" >Submit</button>
+    </div>
+    
+
+
+</div>
+    </div>
+</form>
+</body>
+</html>
+<%- include('partials/footer') %>

@@ -1,0 +1,43 @@
+<%- include('partials/header') %>
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Donor Registration</title>
+    </head>
+    <body style="background-color: gray;">
+        <h6 style="text-align: center;">Credentials of donor</h6>
+        <form action="/donor" method="post">
+            <div class="container" style="width: 500px;background-image: url('/images/give_blood_201998.jpg');background-size: cover;">
+                <% if(message.length>0) { %>
+                    <div class="alert alert-danger col-sm-12"><%= message %></div>
+                  <% }%>
+                    
+        <div class="form-group" style="opacity: 1;">
+            <label for="Phone number">Blood group</label>
+                    <input class="form-control" type="text" placeholder="Fill your blood group here" required name="b_group" value="" class="form-control"> 
+                </div>
+                <div class="form-group" style="opacity: 1;">
+                    <label for="Phone number">Weight</label>
+                    <input class="form-control" type="number" placeholder="Fill your weight" required name="weight" value="" class="form-control"> 
+                </div>
+                <div class="form-group" style="opacity: 1;">
+                    <label for="Phone number">Blood pressure</label>
+                    <input class="form-control" type="number" placeholder="Fill your bloodpressure" required name="bp" value="" class="form-control"> 
+                </div>
+                <div class="form-group" style="opacity: 1;">
+                    <label for="Phone number">Temperature</label>
+                    <input class="form-control" type="number" placeholder="Fill your body temperature in fahrenheit" required name="temp" value="" class="form-control"> 
+                </div>
+
+                <div class="form-group" style="opacity: 1;">
+                    <label for="Phone number">Pulse rate</label>
+                    <input class="form-control" type="number" placeholder="Fill your pulserate" required name="pulse" value="" class="form-control"> 
+                </div>
+                <div class="form-group" style="opacity: 1;">
+                    <button class="btn btn-primary" type="submit" action="/donor">SUbmit</button>
+                </div>
+            </div>
+        </form>
+    </body>
+</html>
+<%- include('partials/footer') %>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Side menu bar</title>
+        <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+        <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+        <link href="https://kit.fontawesome.com/a076d05399.js" rel="stylesheet">
+        <link rel="apple-touch-icon" href="/docs/4.4/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+<link rel="icon" href="/docs/4.4/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="/docs/4.4/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+<link rel="manifest" href="/docs/4.4/assets/img/favicons/manifest.json">
+<link rel="mask-icon" href="/docs/4.4/assets/img/favicons/safari-pinned-tab.svg" color="#563d7c">
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="icon" href="/docs/4.4/assets/img/favicons/favicon.ico">
+<meta name="msapplication-config" content="/docs/4.4/assets/img/favicons/browserconfig.xml">
+<meta name="theme-color" content="#563d7c">
+<style>
+    body{
+        font-family: 'Roboto',sans-serif;
+        background-image: url('/images/listing');
+        background-size: cover;
+    }
+    *{
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        text-decoration: none;
+    }
+    .sidebar{
+        position: fixed;
+        left: 0;
+        width: 250px;
+        height: 100%;
+        background: #0a0204;
+
+    }
+    .sidebar header{
+        font-size: 22px;
+        color: white;
+        text-align: center;
+        line-height: 70px;
+        background: #063146;
+        user-select: none;
+    }
+    .sidebar ul a{
+        display: block;
+        height: 100%;
+        width: 100%;
+        line-height: 65px;
+        font-size: 20px;
+        color: white;
+        padding-left: 40px;
+        box-sizing: border-box;
+        /* border-top: 1px solid rgba(255,255,255,1); */
+        /* border-bottom: 1px solid black; */
+        transition: .4s;
+    }
+    ul li:hover a{
+        padding-left: 50px;
+
+
+    }
+    .sidebar ul a i{
+        margin-right: 16px;
+
+    }
+    #check{
+        display: none;
+
+    }
+    label #btn,label #cancel{
+        position: absolute;
+        cursor: pointer;
+        background: #042331;
+        border-radius: 3px;
+    }
+    label #btn{
+        left: 40px;
+        top: 25px;
+        font-size: 35px;
+        color: white;
+    }
+    label #cancel{
+        z-index: 1111;
+        left: 195px;
+        top: 17px;
+        font-size: 30px;
+        color: #0a5275;
+        padding: 4px 9px;
+    }
+    .back{
+        background-image: url('/images/listing');
+    }
+</style>
+    </head>
+    <body>
+        <input type="checkbox" id="check">
+        <label for="check">
+            <i class="fas fa-bars" id="btn"></i>
+            <i class="fas fa-times" id="btn"></i>
+
+        </label>
+        <div class="back">
+            
+        <div class="sidebar">
+            
+            <ul>
+                
+                <li><a href="#"><i class="fas fa-qrcode"></i>Dashboard</a></li>
+                <li><a href="#"><i class="fas fa-link"></i>Shortcuts</a></li>
+                <li><a href="/checkforavailability"><i class="fas fa-check"></i>checkforavailability</a></li>
+                <li><a href="#"><i class="fas fa-calendar-week"></i>Event</a></li>
+                <li><a href="#"><i class="fas fa-question-circle"></i>Aboutus</a></li>
+                <li><a href="#"><i class="fas fa-sliders-h"></i>services</a></li>
+                <li><a href="#"><i class="fas fa-envelope"></i>contact</a></li>
+                <li><a href="#"><i class="fas fa-qrcode"></i></a></li>
+                <li><a href="#"><i class="fas fa-qrcode"></i></a></li>
+                <li><a href="#"><i class="fas fa-qrcode"></i></a></li>
+
+            </ul>
+        </div>
+</div>
+    </body>
+</html>

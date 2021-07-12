@@ -1,0 +1,46 @@
+<%- include('partials/header') %>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Feedbacks</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	<link href="https://fonts.googleapis.com/css2?family=Fondamento:ital@0;1&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Fondamento:ital@0;1&family=Raleway:ital,wght@1,200&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Galada&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Galada&family=Hind+Siliguri&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link href="https://fonts.googleapis.com/css2?family=Lemonada:wght@500&display=swap" rel="stylesheet">
+</head>
+<body style="background-color: rgb(241, 231, 239);">
+    
+    <div class="container">
+      <div class="row">
+      <% feedback.forEach(function (feedback) { %>
+        <div class="col-4"><br>
+        <div class="card text-center">
+            <div class="card-header">
+              Feedbacks
+            </div>
+            <div class="card-body">
+              <h5 class="card-title"><%= feedback.name %></h5>
+              <p class="card-text"><%= feedback.review %></p>
+              
+            </div>
+            
+          </div>
+          </div>
+          <% }) %>
+      </div><br>
+      <a href="/adminhome" class="btn btn-primary" style="text-align: center;">Back to adminhomepage</a>
+    </div>
+  
+</body>
+<%- include('partials/footer') %>

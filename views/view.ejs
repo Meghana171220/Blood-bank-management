@@ -1,0 +1,32 @@
+<%- include('partials/header') %>
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Blood bank management system</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link href="https://fonts.googleapis.com/css2?family=Ranchers&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Cairo&family=Ranchers&display=swap" rel="stylesheet">
+	
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/css/bootstrap.min.css" integrity="sha384-VCmXjywReHh4PwowAiWNagnWcLhlEJLA5buUprzK8rxFgeH0kww/aWY76TfkUoSX" crossorigin="anonymous"> 
+ </head>
+ <body style="background-color: #D4E2D4;">
+  <% accept.forEach(function(accept){ %>
+   
+    <label for="fname">First Name:</label><p><b><%= accept.fname %></b></p>
+    <label for="lname">Last Name:</label><p><b><%= accept.lname %></b></p>
+    <label for="">Email:</label><p><b><%= accept.a_email %></b></p>
+    <label for="phno">Phone number:</label><p><b><%= accept.phno %></b></p>
+    
+    <label for="city">City:</label><p><b><%= accept.city %></b></p>
+  
+    <label for="b_group">Blood group:</label><p><b><%= accept.a_group %></b></p>
+    <label for="temp">Temperature:</label><p><b><%= accept.a_temp %></b></p>
+    
+  </div>
+    <% }) %>
+ </body>
+ </html>
+ <%- include('partials/footer') %>
